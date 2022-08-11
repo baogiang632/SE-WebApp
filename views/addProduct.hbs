@@ -1,0 +1,102 @@
+
+	<main>
+        <style>
+            table th{
+                font-size: 13px;
+            }
+            td{
+                font-size: 11px;
+            }
+            form p{
+                color: black;
+                font-weight: 500;
+                margin : 0px;
+            }
+            form button{
+                margin-top: 14px;
+                background: none;
+                border: solid 1px #666;
+            }
+            h3{
+                display: flex;
+                justify-content: space-around;
+            }
+        </style>
+		
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-3 col-md-3 col-12 col">
+						<div class="tg-widget tg-catagories">
+							<div class="tg-widgettitle">
+								<h3>Categories</h3>
+							</div>
+							<div class="tg-widgetcontent">
+								<ul>
+									<li><a href="/updateProduct"><span>Update product</span></a></li>
+									<li><a href="/delProduct"><span>Delete product</span></a></li>
+									<li><a href="/addProduct"><span>Add product</span></a></li>
+									<li><a href="/userManage"><span>User manage</span></a></li>
+									
+								</ul>
+							</div>
+						</div>
+					</div>
+
+                    <div class="col-xl-9 col-md-9 col-12 col">
+                        <h3>ADD NEW PRODUCT</h3>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <table class="table table-bordered user-manage">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>BookName</th>
+                                            <th>Categories</th>
+                                            <th>Price</th>
+                                            <th>Link</th>
+                                            <th>Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {{#each allPro}}
+                                        <tr>
+                                            <td>{{this.MaSP}}</td>
+                                            <td>{{this.TenSP}}</td>
+                                            <td>{{this.LoaiSP}}</td>
+                                            <td>{{this.Gia}}</td>
+                                            <td><image src="{{this.LinkAnh}}"></image></td>
+                                            <td>{{this.NgayThem}}</td>
+                                        </tr>
+                                        {{/each}}
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div> 
+                        <form method="POST">
+                            {{!-- <div> --}}
+                                <label><p>Enter book information to add</p></label>
+                                    <div class='col form' style="display: grid">
+                                        <p style="color: red; font-weight: 500">{{addEr}}</p>
+                                        <label><p>ID</p></label>
+                                        <input type="text" name="id"  placeholder="Enter id" required>
+                                        <label><p>BookName</p></label>
+                                        <input type="text" name="bookname"  placeholder="Enter book name"  required>
+                                        <label><p>Categories</p></label>
+                                        <input type="text" name="category"  placeholder="Enter category"  required>
+                                        <label><p>Price</p></label>
+                                        <input type="number" name="price"  placeholder="Enter price"  required>
+                                        <label><p>Link</p></label>
+                                        <input type="url" name="link"  placeholder="Enter link"  required>
+                                        <label><p>Date</p></label>
+                                        <input type="date" name="date"  placeholder="Enter day"  required>
+                                    </div>
+                                <button type="submit">Add</button>
+                        </form> 
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>

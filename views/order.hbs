@@ -1,0 +1,67 @@
+
+	<main>
+        <style>
+            table th{
+                font-size: 13px;
+            }
+            td{
+                font-size: 11px;
+            }
+        </style>
+		
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-3 col-md-3 col-12 col">
+						<div class="tg-widget tg-catagories">
+							<div class="tg-widgettitle">
+								<h3>Categories</h3>
+							</div>
+							<div class="tg-widgetcontent">
+								<ul>
+									<li><a href="/userManage"><span>Product manage</span></a></li>
+									<li><a href="/orderManage"><span>Order manage</span></a></li>
+									<li><a href="/productManage"><span>User manage</span></a></li>
+									
+								</ul>
+							</div>
+						</div>
+					</div>
+
+                    <div class="col-xl-9 col-md-9 col-12 col">
+                        <p>User manage</p>
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+                                <table class="table table-bordered user-manage">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Username</th>
+                                            <th>Email</th>
+                                            <th>Phone</th>
+                                            <th>Address</th>
+                                            <th>Password</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {{#each allUser}}
+                                        <tr>
+                                            <td>{{this.MaKH}}</td>
+                                            <td>{{this.TenKH}}</td>
+                                            <td>{{this.Email}}</td>
+                                            <td>{{this.SDT}}</td>
+                                            <td>{{this.DiaChi}}</td>
+                                            <td></td>
+                                        </tr>
+                                        {{/each}}
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>  
+                    </div>   
+                </div>
+            </div>
+        </section>
+
+    </main>

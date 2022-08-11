@@ -1,0 +1,88 @@
+
+
+    <main>
+        <style>
+            table th{
+                font-size: 13px;
+            }
+            
+            td{
+                font-size: 11px;
+            }
+            .td-address{
+                width: 400px;
+            }
+            h3{
+                display: flex;
+                justify-content: space-around;
+            }
+        </style>
+		
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-3 col-md-3 col-12 col">
+						<div class="tg-widget tg-catagories">
+							<div class="tg-widgettitle">
+								<h3>Categories</h3>
+							</div>
+							<div class="tg-widgetcontent">
+								<ul>
+									<li><a href="/updateProduct"><span>Update product</span></a></li>
+									<li><a href="/delProduct"><span>Delete product</span></a></li>
+									<li><a href="/addProduct"><span>Add product</span></a></li>
+									<li><a href="/userManage"><span>User manage</span></a></li>
+									
+								</ul>
+							</div>
+						</div>
+					</div>
+
+                    <div class="col-xl-9 col-md-9 col-12 col">
+                        <h3>ACCOUNT MANAGE</h3>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <table class="table table-bordered user-manage">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Username</th>
+                                            <th>Email</th>
+                                            <th>Phone</th>
+                                            <th class="td-address">Address</th>
+                                            <th>Password</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {{#each allUser}}
+                                        <tr>
+                                            <td>{{this.MaKH}}</td>
+                                            <td>{{this.TenKH}}</td>
+                                            <td>{{this.Email}}</td>
+                                            <td>{{this.SDT}}</td>
+                                            <td class="td-address">{{this.DiaChi}}</td>
+                                            <td class="td-password">{{this.Pass}}</td>
+                                        </tr>
+                                        {{/each}}
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <form method="POST">
+                            {{!-- <div> --}}
+                                <label><em>Enter username to delete</em></label>
+                                <input type="text" name="username"  placeholder="Enter username">
+                                <button type="submit">Delete</button>
+                        </form>
+                    </div>   
+                </div>
+            </div>
+
+            
+        </section>
+
+
+    </main>
+
+  

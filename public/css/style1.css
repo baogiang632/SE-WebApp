@@ -1,0 +1,53 @@
+.head-bestselling{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+}
+
+.head-bestselling--left p{
+    font-size: 35px;
+}
+
+.head-bestselling--right button{
+    background: none;
+    border-radius: 20px;
+    border: 2px solid #dfd4de;
+    color: #dfd4de;
+}
+
+.header-left{
+    padding-right: 0px !important;
+}
+
+.header-left a{
+    font-weight: 500;
+}
+
+.header-left button{
+    font-size: 15px;
+}
+
+.header-container{
+    padding: 8px 12px;
+}
+
+header{
+    border-bottom: 1px solid #77B748;
+    
+}
+
+.nav-item{
+    font-weight: 500;
+}
+
+.menu{
+
+    border-radius: 40px;
+}
+
+.icofont-search{
+    color: #77B748;
+    font-size: 18px;
+}
+
